@@ -19,11 +19,14 @@ const GoogleAuth = () => {
   const loadUserData = async () => {
     try {
       if (isAuthenticated) {
-        const response = await axios.get("http://localhost:3000/api/profile", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://authtoolkit-backend-29.onrender.com/api/profile",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         console.log(user);
         dispatch(user(response.data));
         // console.log(response.data);
@@ -45,7 +48,7 @@ const GoogleAuth = () => {
       // console.log(result);
 
       const response = await axios.post(
-        "http://localhost:3000/api/auth/google",
+        "https://authtoolkit-backend-29.onrender.com/api/auth/google",
         {
           username: result.user.displayName,
           email: result.user.email,

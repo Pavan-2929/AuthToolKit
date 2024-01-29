@@ -26,11 +26,14 @@ const Login = () => {
   const loadUserData = async () => {
     try {
       if (isAuthenticated) {
-        const response = await axios.get("http://localhost:3000/api/profile", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://authtoolkit-backend-29.onrender.com/api/profile",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         dispatch(user(response.data));
         // console.log(response.data);
       }
@@ -48,7 +51,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://authtoolkit-backend-29.onrender.com/api/auth/login",
         formData
       );
 

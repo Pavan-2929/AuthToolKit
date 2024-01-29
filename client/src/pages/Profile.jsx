@@ -34,7 +34,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/profile/update",
+        "https://authtoolkit-backend-29.onrender.com/api/profile/update",
         formData,
         {
           headers: {
@@ -92,7 +92,7 @@ const Profile = () => {
     e.preventDefault()
     try {
       const deltedUser = await axios.delete(
-        "http://localhost:3000/api/profile/delete",
+        "https://authtoolkit-backend-29.onrender.com/api/profile/delete",
         {
           headers: {
             Authorization: `Bearer ${token}`,
