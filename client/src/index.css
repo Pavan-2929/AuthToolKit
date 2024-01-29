@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(12, 11, 11);
+    color: white;
+}
+
+.active{
+  color: blue; /* Change the color as needed */
+}
